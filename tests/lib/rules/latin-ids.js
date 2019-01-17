@@ -30,7 +30,45 @@ ruleTester.run("latin-ids", rule, {
         {
             code: "var возРаст = 1;",
             errors: [{
-                message: "Unexpected no-latin identifier: возраст",
+                message: "Unexpected no-latin identifier: возРаст",
+                type: "Identifier"
+            }]
+        }
+    ]
+});
+
+ruleTester.run("latin-ids-single", rule, {
+
+    valid: [
+        {
+            code: "var age = 1;"
+        }
+    ],
+
+    invalid: [
+        {
+            code: "var agе = 1;",
+            errors: [{
+                message: "Unexpected no-latin letter: е",
+                type: "Identifier"
+            }]
+        }
+    ]
+});
+
+ruleTester.run("latin-ids-multiple", rule, {
+
+    valid: [
+        {
+            code: "var age = 1;"
+        }
+    ],
+
+    invalid: [
+        {
+            code: "var аgе = 1;",
+            errors: [{
+                message: "Unexpected no-latin letters: а, е",
                 type: "Identifier"
             }]
         }
