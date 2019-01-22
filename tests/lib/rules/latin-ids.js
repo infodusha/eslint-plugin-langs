@@ -73,4 +73,4 @@ ruleTester.run("latin-ids-multiple", rule, {
             }]
         }
     ]
-});
+})
