@@ -30,7 +30,7 @@ ruleTester.run("latin-ids", rule, {
         {
             code: "var возРаст = 1;",
             errors: [{
-                message: "Unexpected no-latin identifier: возРаст",
+                message: "Unexpected no-latin letters: возРаст\r\n                             ^^^^^^^",
                 type: "Identifier"
             }]
         }
@@ -49,7 +49,7 @@ ruleTester.run("latin-ids-single", rule, {
         {
             code: "var agе = 1;",
             errors: [{
-                message: "Unexpected no-latin letter: е",
+                message: "Unexpected no-latin letters: agе\r\n                               ^",
                 type: "Identifier"
             }]
         }
@@ -68,7 +68,7 @@ ruleTester.run("latin-ids-multiple", rule, {
         {
             code: "var аgе = 1;",
             errors: [{
-                message: "Unexpected no-latin letters: а, е",
+                message: "Unexpected no-latin letters: аgе\r\n                             ^ ^",
                 type: "Identifier"
             }]
         }
