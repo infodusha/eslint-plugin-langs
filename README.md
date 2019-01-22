@@ -43,9 +43,6 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* latin-ids
-
-
-
+* [latin-ids](https://github.com/infodusha/eslint-plugin-langs/blob/master/docs/rules/latin-ids.md)
 
 
